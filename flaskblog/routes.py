@@ -49,6 +49,7 @@ def register():
 @app.route("/logout")
 def logout():
     logout_user()
+    flash('User successfully logged out.', "success")
     return redirect(url_for('home'))
 
 @app.route("/account")
