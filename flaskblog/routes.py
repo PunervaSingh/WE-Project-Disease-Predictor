@@ -27,6 +27,7 @@ def login():
         if user and bcrypt.check_password_hash(user.password, form.password.data):
             login_user(user, remember=form.remember.data)
             next_page = request.args.get('next')
+            flash('You have successfully logged in', 'success')
             return redirect(next_page) if next_page else redirect(url_for('home'))
         else:
             flash('Login Unsuccessful. Please check username and password', 'danger')
@@ -56,3 +57,25 @@ def logout():
 @login_required
 def account():
     return render_template('account.html')
+
+@app.route('/changeEmail')
+@login_required
+def change_email():
+    return render_template('change-email.html')
+
+@app.route('/changePassword')
+@login_required
+def change_password():
+    return render_template('change-password.html')
+
+@app.route('/guideline')
+def guideline():
+    return render_template('guideline.html')
+
+@app.route('/checkup')
+def checkup():
+    return render_template('checkup.html')
+
+@app.route('/forgot_password')
+def forgot_password():
+    return render_template('forgot_password.html')

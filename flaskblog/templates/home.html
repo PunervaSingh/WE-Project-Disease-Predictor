@@ -1,6 +1,125 @@
 {%extends "layout.html"%}
-{%block content%}
 
-<h1>Disease Predictor</h1>
+{% block head %}
+<!-- Page title -->
+<title>Disease Prediction</title>
+<!-- Link to respective CSS stylesheet -->
+<link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
+{% endblock %}
 
-{%endblock%} 
+{% block content %}
+<!-- <h1>HOME PAGE</h1> -->
+<div class="container-fluid grey-container">
+  <div class="row">
+    <div class="col-lg-6">
+      <img src="../static/img/home2.png" alt="">
+    </div>
+    <div class="col-lg-6">
+      <h1 class="home-heading">Disease Prediction</h1>
+      <p class="home-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      {% if current_user.is_authenticated %}
+      <a class="change-btn2" href="{{url_for('checkup')}}">Checkup Now!</a>
+      {% else %}
+      <a class="change-btn2" href="{{url_for('login')}}">Get Started</a>
+      {% endif %}
+      <a class="change-btn" href="{{url_for('guideline')}}">Guideline</a>   
+    </div>
+  </div>
+</div>
+<div class="container-fluid site-char">
+  <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-12">
+        <div class="container" >
+          <img class="char-img" src="../static/img/home3.png" alt="">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-12">
+        <div class="container">
+          <img class="char-img" src="../static/img/home3.png" alt="">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>      
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-12">
+        <div class="container">
+          <img class="char-img" src="../static/img/home3.png" alt="">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>      
+      </div>
+  </div>
+</div>
+<footer class="site-footer container-fluid"> 
+  <div class="wrap-size-lg container-fluid"> 
+      <div class="row grid-spacing-sm"> 
+          <div class="footer-div col-lg-4 col-md-2 col-sm-6"> 
+            <h2 class="footer-heading">praedictionem</h2> 
+              <ul class="footer-nav"> 
+                  <li> 
+                      <p class="footer-quote1">Healthy citizens are the greatest asset any country can have.” – Winston Churchill</p>
+                      <p class="footer-quote2">“It is health that is the real wealth, and not pieces of gold and silver.” – Mahatma Gandhi</p>
+                    </li> 
+              </ul> 
+          </div> 
+          <div class="footer-div col-lg-2 col-md-2 col-sm-6"> 
+              <h5 class="footer-subheading">GET IN TOUCH</h5>
+              <ul class="footer-nav"> 
+                  <li> 
+                    <a rel="nofollow noreferrer" target="_blank" href="#"> About us </a> 
+                </li>
+                <li> 
+                  <a rel="nofollow noreferrer" href="#"> Email us </a> 
+              </li> 
+              </ul> 
+          </div> 
+          <div class="footer-div col-lg-4 col-md-2 col-sm-6"> 
+            <h5 class="footer-subheading">JOIN OUR MAILING LIST</h5>
+            <p class="white-header">Get knowledge of latest medical advancement</p>
+              <form action="">
+                <label class="white-header" for="">Name</label>
+                <br>
+                <input class="footer-form-input" type="text">
+                <br>
+                <label class="white-header" for="">Email</label>
+                <br>
+                <input class="footer-form-input" type="text">
+                <br>
+                <button class="footer-form-button" href="#">Subscribe</button>
+              </form> 
+          </div> 
+          <div class="footer-div col-lg-2 col-md-2 col-sm-6"> 
+            <h5 class="footer-subheading">EXPLORE</h5>
+            <ul class="footer-nav"> 
+                <li> 
+                    <a href="#"> Github Repository </a> 
+                </li> 
+                <li> 
+                  <a rel="nofollow noreferrer" target="_blank" href="#"> Guide </a> 
+                </li>
+                <li> 
+                  <a href="#"> Terms of Service </a> 
+                </li>  
+                <li> 
+                  <a href="#"> FAQ's </a> 
+                </li>
+            </ul> 
+        </div> 
+      </div> 
+      <div class="footer-div col-lg-2 col-md-2 col-sm-6"> 
+        <ul class="footer-nav" style="display: flex;"> 
+            <li> 
+                <a href="#"><i class="fab fa-facebook-square"></i></a> 
+            </li> 
+            <li> 
+                <a href="#"><i class="fab fa-instagram"></i></a> 
+            </li> 
+            <li> 
+                <a href="#"><i class="fab fa-twitter-square"></i> </a> 
+            </li> 
+            <li> 
+                <a href="#"><i class="fab fa-linkedin"></i></a> 
+            </li> 
+        </ul> 
+    </div> 
+  </div> 
+</footer>
+{% endblock %}
