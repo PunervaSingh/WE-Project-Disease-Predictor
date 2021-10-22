@@ -1,9 +1,68 @@
 {% extends "layout.html" %}
 
-{% block head %}
-{% endblock %}
-
 {% block content %}
-<h1 style="margin-top: 80px;">CHECKUP PAGE</h1>
+<div id="Symptom" class="tabcontent" style = " 
+    color: rgb(31, 8, 8);
+    
+    padding: 50px;
+    width: 855px;
+    
+">
+    <form name="SymptomForm" id="SymForm" method="POST" action=/disease_predict>
+      <div class="head">
+        Symptom Checker
+      </div>
+      <div class="form-group">
+        <!-- <select multiple data-role="tagsinput" class="form-control" size=1>
+            {% for symp in symptoms  %}
+            <option value= "{{symp}}">{{symp}}</option>
+          {% endfor %}
+        </select> -->
+        <label for="Symptom1" align="left">Symptom1</label>
+        <input type="text" list="symp" multiple="multiple" class="form-control" name="Symptom1">
+        <datalist id="symp">
+            {% for symp in symptoms %}
+            <option value= "{{symp}}">{{symp}}</option>
+          {% endfor %}
+        </datalist>
+  
+        <label for="Symptom2" align="left">Symptom2</label>
+        <input type="text" list="symp" multiple="multiple" class="form-control" name="Symptom2">
+        <datalist id="symp">
+            {% for symp in symptoms %}
+            <option value= "{{symp}}">{{symp}}</option>
+          {% endfor %}
+        </datalist>
+  
+        <label for="Symptom3" align="left">Symptom3</label>
+        <input type="text" list="symp" multiple="multiple" class="form-control" name="Symptom3">
+        <datalist id="symp">
+            {% for symp in symptoms %}
+            <option value= "{{symp}}">{{symp}}</option>
+          {% endfor %}
+        </datalist>
+  
+        <label for="Symptom4" align="left">Symptom4</label>
+        <input type="text" list="symp" multiple="multiple" class="form-control" name="Symptom4">
+        <datalist id="symp">
+            {% for symp in symptoms %}
+            <option value= "{{symp}}">{{symp}}</option>
+          {% endfor %}
+        </datalist>
+  
+        <label for="Symptom5" align="left">Symptom5</label>
+        <input type="text" list="symp" multiple="multiple" class="form-control" name="Symptom5">
+        <datalist id="symp">
+            {% for symp in symptoms %}
+            <option value= "{{symp}}">{{symp}}</option>
+          {% endfor %}
+        </datalist>
+  
+      </div>
+      
+      <button type="submit" class="btn btn-primary" style="padding: 10px;" name=form>Check</button>
+  </form>
+  </div>
+  
 
 {% endblock %}
