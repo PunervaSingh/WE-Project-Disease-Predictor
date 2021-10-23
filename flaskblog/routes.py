@@ -113,3 +113,11 @@ def disease_predict():
 @app.route('/forgot_password')
 def forgot_password():
     return render_template('forgot_password.html')
+
+@app.route('/terms')
+def terms():
+    return render_template('terms.html')
+
+@app.route('/faq')
+def faq():
+    return render_template('faq.html')

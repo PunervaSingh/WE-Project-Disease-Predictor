@@ -34,7 +34,7 @@
     </div>
     <div class="col-lg-5" style="padding-top: 18vh; position: absolute; left: 50px;">
       <h1 class="home-heading inner-div" style="color: white;">Disease Prediction</h1>
-      <p class="home-desc inner-div2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p class="home-desc inner-div2">Disease Prediction using Machine Learning predicts disease based on the symptoms that the user enters. We predict the disease if the patient is not in danger and the user simply wants to know what disease he or she might have. The dataset consisting of at least 100 symptoms, is used to train the model to predict various diseases. The web application suggests treatments through a chat-bot(Medibot) that is meant to deal with the prognosis and some relevant information about the same.</p>
       {% if current_user.is_authenticated %}
       <a class="change-btn inner-div3" href="{{url_for('checkup')}}">Checkup Now!</a>
       {% else %}
@@ -45,73 +45,89 @@
   </div>
 </div>
 
+
+<script type="text/javascript">
+  (function(d, m){
+      var kommunicateSettings = 
+          {"appId":"2a55b713e6315501c716ee288f7006b24","popupWidget":true,"automaticChatOpenOnNavigation":true};
+      var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+      s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+      var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+      window.kommunicate = m; m._globals = kommunicateSettings;
+  })(document, window.kommunicate || {});
+/* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
+</script>
+
 <div class="container-fluid site-char">
   <div class="row" style="text-align: center;">
       <div class="col-lg-4 col-md-4 col-sm-12 show-on-scroll inline-photo">
         <div class="container" >
           <img class="char-img" src="../static/img/home3.png" alt="">
           <h3>Predict Disease</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-          <button class="btn" style="background-color: #ff4449; color: white;">Know more <i class="fas fa-arrow-right"></i></button>
+          <p>The disease is predicted using the algorithm(Decision Tree Classifier) and the user has to enter the symptoms from the given drop-down menu. </p>
+          <a class="btn" href="{{url_for('guideline')}}" style="background-color: #ff4449; color: white;">Know more <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
       <div class="col-lg-4 col-md-4 col-sm-12 show-on-scroll inline-photo">
         <div class="container">
           <img class="char-img" src="../static/img/home3.png" alt="">
           <h3>Treatement Suggestion</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-          <button class="btn" style="background-color: #ff4449; color: white;">Know more <i class="fas fa-arrow-right"></i></button>
+          <p>User is also provided the option of treatment based on the predicted disease. Follow the steps given in helpguide to get the information related to treatement.</p>
+          <a class="btn" href="{{url_for('guideline')}}" style="background-color: #ff4449; color: white;">Know more <i class="fas fa-arrow-right"></i></a>
         </div>      
       </div>
       <div class="col-lg-4 col-md-4 col-sm-12 show-on-scroll inline-photo">
         <div class="container">
           <img class="char-img" src="../static/img/home3.png" alt="">
           <h3>MediBot</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-          <button class="btn" style="background-color: #ff4449; color: white;">Know more <i class="fas fa-arrow-right"></i></button>
+          <p>The web application suggests treatments through a chat-bot(Medibot) that is meant to deal with the prognosis and some relevant information about the same. </p>
+          <a class="btn" href="{{url_for('guideline')}}" style="background-color: #ff4449; color: white;">Know more <i class="fas fa-arrow-right"></i></a>
         </div>      
       </div>
   </div>
 </div>
 
-<div class="container-fluid" style="background-color: #f7f7f7; padding: 60px;text-align: center;">
-  <h1 class="show-on-scroll inline-photo" style="text-align: center;">All the Diseases predicted by us!</h1>
-  <div class="container col-lg-10 col-md-10 col-sm-12">
-    <div class="show-on-scroll inline-photo" style="display: flex;">
-      <p style="margin-left: auto; margin-top: 30px;"><i class="fas fa-check"></i> Lorem ipsum dolor sit amet.</p>
-      <p style="margin-left: auto; margin-top: 30px;"><i class="fas fa-check"></i> Lorem ipsum dolor sit amet.</p>
-      <p style="margin-left: auto; margin-top: 30px;"><i class="fas fa-check"></i> Lorem ipsum dolor sit amet.</p>
-      <p style="margin-left: auto; margin-top: 30px;"><i class="fas fa-check"></i> Lorem ipsum dolor sit amet.</p>
-    </div>
-    <div class="show-on-scroll inline-photo" style="display: flex;">
-      <p style="margin-left: auto; margin-top: 30px;"><i class="fas fa-check"></i> Lorem ipsum dolor sit amet.</p>
-      <p style="margin-left: auto; margin-top: 30px;"><i class="fas fa-check"></i> Lorem ipsum dolor sit amet.</p>
-      <p style="margin-left: auto; margin-top: 30px;"><i class="fas fa-check"></i> Lorem ipsum dolor sit amet.</p>
-      <p style="margin-left: auto; margin-top: 30px;"><i class="fas fa-check"></i> Lorem ipsum dolor sit amet.</p>
-    </div>
-    <div class="show-on-scroll inline-photo" style="display: flex;">
-      <p style="margin-left: auto; margin-top: 30px;"><i class="fas fa-check"></i> Lorem ipsum dolor sit amet.</p>
-      <p style="margin-left: auto; margin-top: 30px;"><i class="fas fa-check"></i> Lorem ipsum dolor sit amet.</p>
-      <p style="margin-left: auto; margin-top: 30px;"><i class="fas fa-check"></i> Lorem ipsum dolor sit amet.</p>
-      <p style="margin-left: auto; margin-top: 30px;"><i class="fas fa-check"></i> Lorem ipsum dolor sit amet.</p>
-    </div>
-    <div class="show-on-scroll inline-photo" style="display: flex;">
-      <p style="margin-left: auto; margin-top: 30px;"><i class="fas fa-check"></i> Lorem ipsum dolor sit amet.</p>
-      <p style="margin-left: auto; margin-top: 30px;"><i class="fas fa-check"></i> Lorem ipsum dolor sit amet.</p>
-      <p style="margin-left: auto; margin-top: 30px;"><i class="fas fa-check"></i> Lorem ipsum dolor sit amet.</p>
-      <p style="margin-left: auto; margin-top: 30px;"><i class="fas fa-check"></i> Lorem ipsum dolor sit amet.</p>
-    </div>
-    <div class="show-on-scroll inline-photo" style="display: flex;">
-      <p style="margin-left: auto; margin-top: 30px;"><i class="fas fa-check"></i> Lorem ipsum dolor sit amet.</p>
-      <p style="margin-left: auto; margin-top: 30px;"><i class="fas fa-check"></i> Lorem ipsum dolor sit amet.</p>
-      <p style="margin-left: auto; margin-top: 30px;"><i class="fas fa-check"></i> Lorem ipsum dolor sit amet.</p>
-      <p style="margin-left: auto; margin-top: 30px;"><i class="fas fa-check"></i> Lorem ipsum dolor sit amet.</p>
-    </div>
-    <div class="show-on-scroll inline-photo" style="display: flex;">
-      <p style="margin-left: auto; margin-top: 30px;"><i class="fas fa-check"></i> Lorem ipsum dolor sit amet.</p>
-      <p style="margin-left: auto; margin-top: 30px;"><i class="fas fa-check"></i> Lorem ipsum dolor sit amet.</p>
-      <p style="margin-left: auto; margin-top: 30px;"><i class="fas fa-check"></i> Lorem ipsum dolor sit amet.</p>
-      <p style="margin-left: auto; margin-top: 30px;"><i class="fas fa-check"></i> Lorem ipsum dolor sit amet.</p>
+
+<div class="container-fluid" style="background-color: #f7f7f7; padding: 60px;">
+  <h1 class="show-on-scroll inline-photo" style="text-align: center;">Some of the Diseases predicted by us!</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3">
+        <p class="show-on-scroll inline-photo" style="margin-right: auto; margin-top: 30px;"><i class="fas fa-check"></i> Alzheimer's disease</p>
+        <p class="show-on-scroll inline-photo" style="margin-right: auto; margin-top: 30px;"><i class="fas fa-check"></i> Pneumocystis pneumonia</p>
+        <p class="show-on-scroll inline-photo" style="margin-right: auto; margin-top: 30px;"><i class="fas fa-check"></i> Accident cerebrovascular</p>
+        <p class="show-on-scroll inline-photo" style="margin-right: auto; margin-top: 30px;"><i class="fas fa-check"></i> Arthritis</p>
+        <p class="show-on-scroll inline-photo" style="margin-right: auto; margin-top: 30px;"><i class="fas fa-check"></i> Chronic kidney failure</p>
+        <p class="show-on-scroll inline-photo" style="margin-right: auto; margin-top: 30px;"><i class="fas fa-check"></i> Coronary heart disease</p>
+        <p class="show-on-scroll inline-photo" style="margin-right: auto; margin-top: 30px;"><i class="fas fa-check"></i> Deep vein thrombosis</p>
+      </div>
+      <div class="col-lg-3">
+        <p class="show-on-scroll inline-photo" style="margin-right: auto; margin-top: 30px;"><i class="fas fa-check"></i> Deglutition disorder</p>
+        <p class="show-on-scroll inline-photo" style="margin-right: auto; margin-top: 30px;"><i class="fas fa-check"></i> Depressive disorder</p>
+        <p class="show-on-scroll inline-photo" style="margin-right: auto; margin-top: 30px;"><i class="fas fa-check"></i> Failure heart congestive</p>
+        <p class="show-on-scroll inline-photo" style="margin-right: auto; margin-top: 30px;"><i class="fas fa-check"></i> Kidney failure</p>
+        <p class="show-on-scroll inline-photo" style="margin-right: auto; margin-top: 30px;"><i class="fas fa-check"></i> Hemorrhoids</p>
+        <p class="show-on-scroll inline-photo" style="margin-right: auto; margin-top: 30px;"><i class="fas fa-check"></i> Hepatitis</p>
+        <p class="show-on-scroll inline-photo" style="margin-right: auto; margin-top: 30px;"><i class="fas fa-check"></i> Hyperbilirubinemia</p>
+      </div>
+      <div class="col-lg-3">
+        <p class="show-on-scroll inline-photo" style="margin-right: auto; margin-top: 30px;"><i class="fas fa-check"></i> Incontinence</p>
+        <p class="show-on-scroll inline-photo" style="margin-right: auto; margin-top: 30px;"><i class="fas fa-check"></i> Infection urinary tract</p>
+        <p class="show-on-scroll inline-photo" style="margin-right: auto; margin-top: 30px;"><i class="fas fa-check"></i> ketoacidosis diabetic</p>
+        <p class="show-on-scroll inline-photo" style="margin-right: auto; margin-top: 30px;"><i class="fas fa-check"></i> Kidney disease</p>
+        <p class="show-on-scroll inline-photo" style="margin-right: auto; margin-top: 30px;"><i class="fas fa-check"></i> Malignant neoplasm of breast</p>
+        <p class="show-on-scroll inline-photo" style="margin-right: auto; margin-top: 30px;"><i class="fas fa-check"></i> Malignant tumor of colon</p>
+        <p class="show-on-scroll inline-photo" style="margin-right: auto; margin-top: 30px;"><i class="fas fa-check"></i> Migraine disorders</p>
+      </div>
+      <div class="col-lg-3">
+        <p class="show-on-scroll inline-photo" style="margin-right: auto; margin-top: 30px;"><i class="fas fa-check"></i> Neoplasm metastasis</p>
+        <p class="show-on-scroll inline-photo" style="margin-right: auto; margin-top: 30px;"><i class="fas fa-check"></i> Osteoporosis</p>
+        <p class="show-on-scroll inline-photo" style="margin-right: auto; margin-top: 30px;"><i class="fas fa-check"></i> Pneumonia</p>
+        <p class="show-on-scroll inline-photo" style="margin-right: auto; margin-top: 30px;"><i class="fas fa-check"></i> Psychotic disorder</p>
+        <p class="show-on-scroll inline-photo" style="margin-right: auto; margin-top: 30px;"><i class="fas fa-check"></i> Septicemia</p>
+        <p class="show-on-scroll inline-photo" style="margin-right: auto; margin-top: 30px;"><i class="fas fa-check"></i> Tonic-clonic epilepsy</p>
+        <p class="show-on-scroll inline-photo" style="margin-right: auto; margin-top: 30px;"><i class="fas fa-check"></i> Tricuspid valve insufficiency</p>
+      </div>
     </div>
   </div>
 </div>
@@ -128,10 +144,10 @@
     </div>
     <div class="col-lg-6">
       <h1 class="show-on-scroll inline-photo">Prediction Analysis</h1>
-      <p class="show-on-scroll inline-photo">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, molestiae iure. Laudantium accusamus provident in distinctio. Aliquam consequatur similique reiciendis odit debitis, adipisci deleniti vel doloribus! Harum magnam quas veniam temporibus molestias corporis hic error quasi? Maiores alias accusantium corrupti, temporibus, in praesentium nostrum aperiam at sit voluptates laudantium quam?</p>
-      <p class="show-on-scroll inline-photo"><i class="fas fa-check"></i> Lorem ipsum dolor sit amet.</p>
-      <p class="show-on-scroll inline-photo"><i class="fas fa-check"></i> Lorem ipsum dolor sit amet.</p>
-      <p class="show-on-scroll inline-photo"><i class="fas fa-check"></i> Lorem ipsum dolor sit amet.</p>
+      <p class="show-on-scroll inline-photo">The application of classification algorithms on disease datasets yields promising results by developing adaptive, automated and intelligent diagnostic systems for diseases. Classification systems can be used to expedite the process and to enhance the computational efficiency of results. We have analyze accuracy of decision tree classification systems used in our system for disease prediction.</p>
+      <p class="show-on-scroll inline-photo"><i class="fas fa-check"></i> Decision tree classification model</p>
+      <p class="show-on-scroll inline-photo"><i class="fas fa-check"></i> 90% accuracy rate of ml model</p>
+      <p class="show-on-scroll inline-photo"><i class="fas fa-check"></i> Link to disease dataset - <a href="https://impact.dbmi.columbia.edu/~friedma/Projects/DiseaseSymptomKB/index.html">Dataset</a></p>
     </div>
   </div>
 </div>
@@ -183,17 +199,18 @@
       </div>
       <div class="col-lg-6">
           <form action="">
-              <input class="contact-input show-on-scroll inline-photo" type="text" placeholder="Name">
+              <input class="contact-input show-on-scroll inline-photo" type="text" name="name" placeholder="Enter your name">
               <br>
-              <input class="contact-input show-on-scroll inline-photo" type="text" placeholder="Email">
+              <input class="contact-input show-on-scroll inline-photo" type="text" name="email" placeholder="Enter your email">
               <br>
-              <textarea class="contact-input show-on-scroll inline-photo" id="" name="" rows="5" cols="50" placeholder="Message"></textarea>            
+              <textarea class="contact-input show-on-scroll inline-photo" id="" name="" rows="5" cols="50" type="text" name="msg" placeholder="Enter your message"></textarea>            
               <br>
-              <button style="width: 80%; background-color: #28818d; color: white;" class="btn contact-button show-on-scroll inline-photo" href="#">Send Message Now!</button>
+              <input style="width: 80%; background-color: #28818d; color: white;" class="btn contact-button show-on-scroll inline-photo" type="submit">
           </form> 
       </div>
   </div>
 </div>
+
 
 <div class="bottom-container" style="background-color: #38424b; padding: 40px;text-align: center;">
         <a class="footer-link" href="https://www.linkedin.com">LinkedIn</a>
@@ -204,75 +221,10 @@
         <a class="footer-link" href="{{url_for('faq')}}"> FAQ's </a>
         <p style="color:white;margin-top: 30px; color: rgb(95, 91, 91);" class="copyright">© 2021 predictium @ Talentsprint Project.</p>
     </div>
-<!-- <footer class="site-footer container-fluid"> 
-  <div class="wrap-size-lg container-fluid"> 
-      <div class="row grid-spacing-sm"> 
-          <div class="footer-div col-lg-6 col-md-2 col-sm-6"> 
-            <h2 class="footer-heading">praedictionem</h2> 
-              <ul class="footer-nav"> 
-                  <li> 
-                      <p class="footer-quote1">Healthy citizens are the greatest asset any country can have.” – Winston Churchill</p>
-                      <p class="footer-quote2">“It is health that is the real wealth, and not pieces of gold and silver.” – Mahatma Gandhi</p>
-                    </li> 
-              </ul> 
-          </div> 
-          <div class="footer-div col-lg-3 col-md-2 col-sm-6"> 
-              <h5 class="footer-subheading">GET IN TOUCH</h5>
-              <ul class="footer-nav"> 
-                  <li> 
-                    <a rel="nofollow noreferrer" target="_blank" href="#"> About us </a> 
-                </li>
-                <li> 
-                  <a rel="nofollow noreferrer" href="#"> Email us </a> 
-              </li> 
-              </ul> 
-          </div>
-          <div class="footer-div col-lg-3 col-md-2 col-sm-6"> 
-            <h5 class="footer-subheading">EXPLORE</h5>
-            <ul class="footer-nav"> 
-                <li> 
-                    <a href="#"> Github Repository </a> 
-                </li> 
-                <li> 
-                  <a rel="nofollow noreferrer" target="_blank" href="#"> Guide </a> 
-                </li>
-                <li> 
-                  <a href="#"> Terms of Service </a> 
-                </li>  
-                <li> 
-                  <a href="#"> FAQ's </a> 
-                </li>
-            </ul> 
-        </div> 
-      </div>
-  </div> 
-</footer> -->
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.4.0/dist/chartjs-plugin-datalabels.min.js"></script>
-<script>
-  new Chart(document.getElementById("doughnut-chart"), {
-     type: 'doughnut',
-     data: {
-     labels: ['Accuracy', 'Close to accurate', 'not accurate'],
-     datasets: [
-         {
-         backgroundColor: ["rgb(204, 102, 102)", "rgb(230, 0, 230)","rgb(102, 102, 255)","rgb(0, 153, 51)","rgb(179, 179, 0)","rgb(255, 77, 148)", "rgb(77, 0, 153)", "rgb(51, 204, 204)", "rgb(51, 255, 119)", "rgb(204, 102, 255)","rgb(128, 128, 0)","rgb(102, 102, 153)","rgb(255, 153, 0)","rgb(0, 102, 204)","rgb(153, 153, 102)","rgb(102, 153, 153)","rgb(252, 174, 174)","rgb(0, 255, 153)","rgb(230, 230, 0)"],
-         
-         
-         data: [90,10, 40],
-         datalabels:{
-         display:false,
-         color:"black",
-             },
-         },
-     ],
-     },
-     options: {
-         responsive: true, 
-         maintainAspectRatio: false
-     }
-     })
-</script>
 <script src="{{url_for('static', filename='js/guide.js')}}"></script>
+<script src="{{url_for('static', filename='js/main.js')}}"></script>
 {% endblock %}
