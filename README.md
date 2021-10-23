@@ -68,7 +68,7 @@
 - Implementing dialogflow bot into our web application with the help of kommunicate.
 
 <a id="challenges"></a>
-## 💡 Challenges faced and learnings
+## 💡 Challenges faced
 - Had technical setup issue related to sklearn library while developing the project.
 - Gathering dataset for the diseases and their treatment.
 - Diﬀiculty with model building for disease prediction and integrating it with the web application.
