@@ -45,6 +45,19 @@
   </div>
 </div>
 
+
+<script type="text/javascript">
+  (function(d, m){
+      var kommunicateSettings = 
+          {"appId":"2a55b713e6315501c716ee288f7006b24","popupWidget":true,"automaticChatOpenOnNavigation":true};
+      var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+      s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+      var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+      window.kommunicate = m; m._globals = kommunicateSettings;
+  })(document, window.kommunicate || {});
+/* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
+</script>
+
 <div class="container-fluid site-char">
   <div class="row" style="text-align: center;">
       <div class="col-lg-4 col-md-4 col-sm-12 show-on-scroll inline-photo">
@@ -197,6 +210,7 @@
       </div>
   </div>
 </div>
+
 
 <div class="bottom-container" style="background-color: #38424b; padding: 40px;text-align: center;">
         <a class="footer-link" href="https://www.linkedin.com">LinkedIn</a>
