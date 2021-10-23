@@ -1,7 +1,183 @@
 {%extends "layout.html"%}
+
+{% block head %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/about.css')}}">
+{% endblock %}
+
 {%block content%}
+    <div class="main-div" style="text-align: center;">
+        <img class="bg-img" src="https://images.pexels.com/photos/3255761/pexels-photo-3255761.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+        <h1 class="inner-div" style="margin-top: 80px;position: absolute;top: 30vh;width: 50%;left: 22%;margin: 40px;font-weight: 600;">Disease Prediction</h1>
+        <h1 class="inner-div2" style="margin-top: 80px;font-size: 20px;position: absolute;top: 40vh;width: 50%;left: 25%;font-weight: 300;">A web application to predicts the disease based on the symptoms given by the user and suggesting the treatments to
+            deal with the predicted disease.</h1>
+        <div style="display: flex;flex-direction: column;">
+            <i class="down-arrow fas fa-angle-down inner-div3" style="position: absolute;top: 60vh;left: 49%;"></i>
+            <i class="down-arrow fas fa-angle-down inner-div4" style="position: absolute;top: 63vh;left: 49%;"></i>
+            <i class="down-arrow fas fa-angle-down inner-div5" style="position: absolute;top: 66vh;left: 49%;"></i>
+        </div>
+        <!-- <button class="btn" style="margin-top: 80px;position: absolute;top: 40vh;left: 50%;background-color: darkcyan">About US</button> -->
+    </div>
+            
 
-<h1 style="margin-top: 80px;">A web application to predicts the disease based on the symptoms given by the user and suggesting the treatments to
-    deal with the predicted disease.</h1>
+    <div style="padding: 80px; background-color: #f7f7f7; margin-bottom: 50px;">
+        <!-- <div style="width: 50%;">
+            <img class="profile-pic" src="https://images.pexels.com/photos/4386464/pexels-photo-4386464.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" height="250px" alt="">
+        </div>
+        <div style="width: 50%; text-align: left;">
+            <h1 style="margin-bottom: 0;">Your name</h1>
+            <h2 style="margin: 20px 0;">Your college name</h2>
+            <h3>Your branch name</h3>
+            <h4>Year</h4>
+            <p style="text-align: justify; width: 75%;">Your Introduction - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia eveniet dicta ipsum tenetur illo, saepe sapiente consequatur repellat explicabo, repudiandae ratione numquam repellendus voluptate sit deserunt minus! Ducimus modi aperiam, obcaecati ipsum suscipit, corporis saepe id minima odit illum inventore!</p>        
+        </div> -->
+        <h2 class="show-on-scroll inline-photo">Why disease prediction?</h2>
+        <i class="down-arrow fas fa-angle-down show-on-scroll inline-photo"></i>
+        <p class="show-on-scroll inline-photo" style="padding: 0 40px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus laborum sequi saepe nesciunt placeat repellendus reiciendis maxime at incidunt quibusdam unde provident, eum nihil? Illo quam itaque laudantium voluptas consequatur voluptatum fugiat laborum. Omnis odio labore a exercitationem amet assumenda repudiandae dolore magni vel, magnam nihil quod accusantium explicabo delectus.</p>
+    </div>
+    <div class="features" style="padding: 120px 0;">
+        <h2 class="show-on-scroll inline-photo">Features</h2>
+        <i class="down-arrow fas fa-angle-down show-on-scroll inline-photo"></i>
+        <ol class="show-on-scroll inline-photo" style="display: flex; margin: 0 80px;padding-left: 0;">
+            <li style="padding: 20px;">
+                <img style="height: 150px; width: 150px; border-radius: 50%; object-fit: cover;margin: 40px;" src="../static/img/course1.jpeg" alt="">
+                <h3>First Feature</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, sit cum! Optio quae delectus consequuntur veniam ipsa nihil fuga.</p>
+            </li>
+            <li style="padding: 30px;">
+                <img style="height: 150px; width: 150px; border-radius: 50%; object-fit: cover;margin: 40px;" src="../static/img/course2.png" alt="">
+                <h3>Second Feature</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, sit cum! Optio quae delectus consequuntur veniam ipsa nihil fuga.</p>
+            </li>
+            <li style="padding: 20px;">
+                <img style="height: 150px; width: 150px; border-radius: 50%; object-fit: cover;margin: 40px;" src="../static/img/course3.png" alt="">
+                <h3>Third Feature</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, sit cum! Optio quae delectus consequuntur veniam ipsa nihil fuga.</p>
+            </li>
+        </ol>
+    </div>
 
+    <div class="stats" style="background-color: #f7f7f7; padding: 120px 0;">
+        <h2 class="show-on-scroll inline-photo">Fun Stats</h2>
+        <i class="show-on-scroll inline-photo down-arrow fas fa-angle-down"></i>
+        <ul style="margin-bottom: 0;">
+            <div class="skill-row show-on-scroll inline-photo">
+                <img class="code-img" src="../static/img/course1.jpeg" alt="code-img">
+                <h3>Prediction Accuracy</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto dolore autem neque rerum officiis! Veniam facilis veritatis tenetur voluptate laborum placeat magnam, ducimus, qui aliquam eum nemo explicabo. Aliquid, sit.</p>
+                <p>Rating: <i class="fas fa-star golden"></i><i class="fas fa-star golden"></i><i class="fas fa-star golden"></i><i class="fas fa-star golden"></i><i class="fas fa-star"></i></p>
+            </div>
+            <div class="skill-row show-on-scroll inline-photo">
+                <img class="chilli-img" src="../static/img/course2.png" alt="chillies-img">
+                <h3>Awards & Achievements</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero voluptatem dolore autem in impedit ea sapiente, quas non excepturi, deleniti magnam expedita nihil saepe! Labore architecto magnam unde rem tempore.</p>
+                <p>Rating: <i class="fas fa-star golden"></i><i class="fas fa-star golden"></i><i class="fas fa-star golden"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+            </div>
+            <div class="skill-row show-on-scroll inline-photo" style="margin-bottom: 0;">
+                <img class="code-img" src="../static/img/course3.png" alt="code-img">
+                <h3>Creative Ideas</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, numquam cupiditate. Maiores, maxime. Laboriosam impedit quis voluptates quasi ab, officia odio aut natus quos error veniam ex doloremque blanditiis excepturi.</p>
+                <p style="margin-bottom: 0;">Rating: <i class="fas fa-star golden"></i><i class="fas fa-star golden"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+            </div>
+        </ul>
+    </div>
+
+    <div style="padding: 120px;">
+        <h2 class="show-on-scroll inline-photo">OUR TEAM</h2>
+        <i class="down-arrow fas fa-angle-down show-on-scroll inline-photo"></i>
+        <br>
+        <h3 class="show-on-scroll inline-photo">We are a small team with a lot of friends!</h3>
+        <p class="show-on-scroll inline-photo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, aut?</p>
+        <div style="display:flex; flex-direction:row;">
+            <div style="padding: 50px;">
+                <img class="profile-pic show-on-scroll inline-photo" src="../static/img/samya.jpeg" alt="">
+                <div class="show-on-scroll inline-photo">
+                    <h3>Samya Jain</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id corporis cupiditate perspiciatis. Nihil numquam beatae ea voluptatum accusantium saepe, rem delectus sunt temporibus libero totam!</p>
+                    <a href="https://www.linkedin.com/in/samya-jain-a68443204/"><i style="color: darkcyan;font-size: 20px;" class="fab fa-linkedin-in"></i></a>
+                    <a href="https://facebook.com"><i style="color: darkcyan;font-size: 20px;" class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com"><i style="color: darkcyan;font-size: 20px;" class="fab fa-twitter"></i></a>
+                    <a href="https://github.com/samya02"><i style="color: darkcyan;font-size: 20px;" class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div style="padding: 50px;">
+                <img class="profile-pic show-on-scroll inline-photo" src="../static/img/pic.jpeg" alt="">
+                <div class="show-on-scroll inline-photo">
+                    <h3>Punerva Singh</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id corporis cupiditate perspiciatis. Nihil numquam beatae ea voluptatum accusantium saepe, rem delectus sunt temporibus libero totam!</p>
+                    <a href="https://www.linkedin.com/in/punerva-singh-958305204/"><i style="color: darkcyan;font-size: 20px;" class="fab fa-linkedin-in"></i></a>
+                    <a href="https://facebook.com"><i style="color: darkcyan;font-size: 20px;" class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com"><i style="color: darkcyan;font-size: 20px;" class="fab fa-twitter"></i></a>
+                    <a href="https://github.com/PunervaSingh"><i style="color: darkcyan;font-size: 20px;" class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="fluid-container newsletter" style="background-color: #62afb9; padding: 60px; text-align: left;">
+        <div class="row">
+            <div class="col-lg-3">
+                <img src="../static/img/letter1.png" alt="">
+            </div>
+            <div class="col-lg-9" style="padding: 50px 0 0 50px;">
+                <div>
+                    <h3 style="font-weight: 500; color: white;">Subscribe to our newsletter and never miss an update!</h3>
+                    <p style="color: white;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae nostrum rerum saepe ratione temporibus enim?</p>
+                    <input type="text" placeholder="Enter your email address">
+                    <button class="btn" style="padding: 10px; background-color: #ff4449; color: white;">Let's get started!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="bottom-container" style="background-color: #2a333b; padding: 80px 40px 40px 40px;">
+        <h2 style="color: #62afb9;">CONTACT US</h2>
+        <i class="fas fa-angle-down"></i>
+        <h3 style="color: white;">Let's us know what is on your mind!</h3>
+        <div class="row" style="padding: 80px 0;text-align: left;">
+            <div class="col-lg-6">
+                <div>
+                    <ul class="info">
+                        <li>
+                            <span class="contact-icon"><i class="fas fa-map-marker-alt"></i></span>
+                            <span class="contact-desc">XYZ, main road Kashmere gate, Delhi 110012</span>
+                        </li>
+                        <li>
+                            <span class="contact-icon"><i class="fas fa-at"></i></span>
+                            <a style="color: white;" class="contact-desc" href="mailto:punerva21@gmail.com">lorem@gmail.com</a>
+                        </li>
+                        <li>
+                            <span class="contact-icon"><i class="fas fa-phone-volume"></i></span>
+                            <span class="contact-desc">947-986-6XXX</span>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="sci" style="display: flex;">
+                    <li><a href="https://facebook.com"><i style="font-size: 25px;" class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://twitter.com"><i style="font-size: 25px;" class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://instagram.com"><i style="font-size: 25px;" class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://pinterest.com"><i style="font-size: 25px;" class="fab fa-pinterest-p"></i></a></li>
+                    <li><a href="https://linkedin.com"><i style="font-size: 25px;" class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <form action="">
+                    <input class="contact-input" type="text" placeholder="Name">
+                    <br>
+                    <input class="contact-input" type="text" placeholder="Email">
+                    <br>
+                    <textarea class="contact-input" id="" name="" rows="5" cols="50" placeholder="Message"></textarea>            
+                    <br>
+                    <button style="width: 80%; background-color: #28818d; color: white;" class="btn contact-button" href="#">Send Message Now!</button>
+                </form> 
+            </div>
+        </div>
+    </div> -->
+    <div class="bottom-container" style="background-color: #38424b; padding: 40px;text-align: center;">
+        <a class="footer-link" href="https://www.linkedin.com">LinkedIn</a>
+        <a class="footer-link" rel="nofollow noreferrer" href="mailto:punerva21@gmail.com"> Email us </a>
+        <a class="footer-link" href="https://github.com/samya02/WE-Project-Disease-Predictor"> Github Repository </a>
+        <a class="footer-link" rel="nofollow noreferrer" href="{{url_for('guideline')}}"> Guide </a> 
+        <a class="footer-link" href="{{url_for('terms')}}"> Terms of Service </a>
+        <a class="footer-link" href="{{url_for('faq')}}"> FAQ's </a>
+        <p style="color:white;margin-top: 30px; color: rgb(95, 91, 91);" class="copyright">© 2021 predictium @ Talentsprint Project.</p>
+    </div>
+    <script src="{{url_for('static', filename='js/guide.js')}}"></script>
 {%endblock%}
