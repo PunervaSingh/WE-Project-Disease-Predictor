@@ -97,7 +97,7 @@
 - [Pandas Documentation](https://pandas.pydata.org/docs/)
 - [Numpy Documentation](https://numpy.org/doc/)
 - [Scikit-learn Documentation](https://scikit-learn.org/stable/)
-- [Disease Dataset]()
+- [Disease Dataset](https://impact.dbmi.columbia.edu/~friedma/Projects/DiseaseSymptomKB/index.html)
 
 
 <a id="setup"></a>
