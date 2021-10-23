@@ -43,21 +43,21 @@
 <a id="overview"></a>
 ## 📖 Application Overview
 ### Home Page
-![Website Image](flaksblog/static/img/main.png?raw=true "Title")
+![Website Image](flaskblog/static/img/main.png?raw=true "Title")
 ### About Page 
-![Website Image](flaksblog/static/img/about.png?raw=true "Title")
+![Website Image](flaskblog/static/img/about.png?raw=true "Title")
 ### Register Page 
-![Website Image](flaksblog/static/img/register.png?raw=true "Title")
+![Website Image](flaskblog/static/img/register.png?raw=true "Title")
 ### Login Page
-![Website Image](flaksblog/static/img/login.png?raw=true "Title")
+![Website Image](flaskblog/static/img/login.png?raw=true "Title")
 ### Checkup Page 
-![Website Image](flaksblog/static/img/checkup.png?raw=true "Title")
+![Website Image](flaskblog/static/img/checkup.png?raw=true "Title")
 ### User Helpguide
-![Website Image](flaksblog/static/img/helpguide.png?raw=true "Title")
+![Website Image](flaskblog/static/img/helpguide.png?raw=true "Title")
 ### Terms and condition Page 
-![Website Image](flaksblog/static/img/terms.png?raw=true "Title")
+![Website Image](flaskblog/static/img/terms.png?raw=true "Title")
 ### FAQ Page 
-![Website Image](flaksblog/static/img/faq.png?raw=true "Title")
+![Website Image](flaskblog/static/img/faq.png?raw=true "Title")
 
 <a id="learning"></a>
 ## 💡 Learnings
