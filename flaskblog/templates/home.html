@@ -5,53 +5,209 @@
 <title>Disease Prediction</title>
 <!-- Link to respective CSS stylesheet -->
 <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
+<style>
+  .fa-check{
+    color: #ff4449;
+    margin-right: 10px;
+  }
+  h1, h2, h3{
+    color: #3e7b83;
+    font-weight: bolder;
+  }
+  .underline {
+  border-bottom: 2px solid currentColor;
+  display: inline-block;
+  line-height: 1.5;
+}
+.bottom-container li{
+  margin: 20px 0;
+}
+</style>
 {% endblock %}
 
 {% block content %}
 <!-- <h1>HOME PAGE</h1> -->
 <div class="container-fluid grey-container">
   <div class="row">
-    <div class="col-lg-6">
-      <img src="../static/img/home2.png" alt="">
+    <div class="col-lg-6" style="padding: 0; ">
+      <img style="height: 100vh; width: 100vw; object-fit: cover;" src="../static/img/background.jpeg" alt="">
     </div>
-    <div class="col-lg-6">
-      <h1 class="home-heading">Disease Prediction</h1>
-      <p class="home-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <div class="col-lg-5" style="padding-top: 18vh; position: absolute; left: 50px;">
+      <h1 class="home-heading inner-div" style="color: white;">Disease Prediction</h1>
+      <p class="home-desc inner-div2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       {% if current_user.is_authenticated %}
-      <a class="change-btn2" href="{{url_for('checkup')}}">Checkup Now!</a>
+      <a class="change-btn inner-div3" href="{{url_for('checkup')}}">Checkup Now!</a>
       {% else %}
-      <a class="change-btn2" href="{{url_for('login')}}">Get Started</a>
+      <a class="change-btn inner-div3" href="{{url_for('login')}}">Get Started</a>
       {% endif %}
-      <a class="change-btn" href="{{url_for('guideline')}}">Guideline</a>   
+      <a class="change-btn inner-div3" href="{{url_for('guideline')}}">Help-Guide</a>   
     </div>
   </div>
 </div>
+
 <div class="container-fluid site-char">
-  <div class="row">
-      <div class="col-lg-4 col-md-4 col-sm-12">
+  <div class="row" style="text-align: center;">
+      <div class="col-lg-4 col-md-4 col-sm-12 show-on-scroll inline-photo">
         <div class="container" >
           <img class="char-img" src="../static/img/home3.png" alt="">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <h3>Predict Disease</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+          <button class="btn" style="background-color: #ff4449; color: white;">Know more <i class="fas fa-arrow-right"></i></button>
         </div>
       </div>
-      <div class="col-lg-4 col-md-4 col-sm-12">
+      <div class="col-lg-4 col-md-4 col-sm-12 show-on-scroll inline-photo">
         <div class="container">
           <img class="char-img" src="../static/img/home3.png" alt="">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <h3>Treatement Suggestion</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+          <button class="btn" style="background-color: #ff4449; color: white;">Know more <i class="fas fa-arrow-right"></i></button>
         </div>      
       </div>
-      <div class="col-lg-4 col-md-4 col-sm-12">
+      <div class="col-lg-4 col-md-4 col-sm-12 show-on-scroll inline-photo">
         <div class="container">
           <img class="char-img" src="../static/img/home3.png" alt="">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <h3>MediBot</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+          <button class="btn" style="background-color: #ff4449; color: white;">Know more <i class="fas fa-arrow-right"></i></button>
         </div>      
       </div>
   </div>
 </div>
-<footer class="site-footer container-fluid"> 
+
+<div class="container-fluid" style="background-color: #f7f7f7; padding: 60px;text-align: center;">
+  <h1 class="show-on-scroll inline-photo" style="text-align: center;">All the Diseases predicted by us!</h1>
+  <div class="container col-lg-10 col-md-10 col-sm-12">
+    <div class="show-on-scroll inline-photo" style="display: flex;">
+      <p style="margin-left: auto; margin-top: 30px;"><i class="fas fa-check"></i> Lorem ipsum dolor sit amet.</p>
+      <p style="margin-left: auto; margin-top: 30px;"><i class="fas fa-check"></i> Lorem ipsum dolor sit amet.</p>
+      <p style="margin-left: auto; margin-top: 30px;"><i class="fas fa-check"></i> Lorem ipsum dolor sit amet.</p>
+      <p style="margin-left: auto; margin-top: 30px;"><i class="fas fa-check"></i> Lorem ipsum dolor sit amet.</p>
+    </div>
+    <div class="show-on-scroll inline-photo" style="display: flex;">
+      <p style="margin-left: auto; margin-top: 30px;"><i class="fas fa-check"></i> Lorem ipsum dolor sit amet.</p>
+      <p style="margin-left: auto; margin-top: 30px;"><i class="fas fa-check"></i> Lorem ipsum dolor sit amet.</p>
+      <p style="margin-left: auto; margin-top: 30px;"><i class="fas fa-check"></i> Lorem ipsum dolor sit amet.</p>
+      <p style="margin-left: auto; margin-top: 30px;"><i class="fas fa-check"></i> Lorem ipsum dolor sit amet.</p>
+    </div>
+    <div class="show-on-scroll inline-photo" style="display: flex;">
+      <p style="margin-left: auto; margin-top: 30px;"><i class="fas fa-check"></i> Lorem ipsum dolor sit amet.</p>
+      <p style="margin-left: auto; margin-top: 30px;"><i class="fas fa-check"></i> Lorem ipsum dolor sit amet.</p>
+      <p style="margin-left: auto; margin-top: 30px;"><i class="fas fa-check"></i> Lorem ipsum dolor sit amet.</p>
+      <p style="margin-left: auto; margin-top: 30px;"><i class="fas fa-check"></i> Lorem ipsum dolor sit amet.</p>
+    </div>
+    <div class="show-on-scroll inline-photo" style="display: flex;">
+      <p style="margin-left: auto; margin-top: 30px;"><i class="fas fa-check"></i> Lorem ipsum dolor sit amet.</p>
+      <p style="margin-left: auto; margin-top: 30px;"><i class="fas fa-check"></i> Lorem ipsum dolor sit amet.</p>
+      <p style="margin-left: auto; margin-top: 30px;"><i class="fas fa-check"></i> Lorem ipsum dolor sit amet.</p>
+      <p style="margin-left: auto; margin-top: 30px;"><i class="fas fa-check"></i> Lorem ipsum dolor sit amet.</p>
+    </div>
+    <div class="show-on-scroll inline-photo" style="display: flex;">
+      <p style="margin-left: auto; margin-top: 30px;"><i class="fas fa-check"></i> Lorem ipsum dolor sit amet.</p>
+      <p style="margin-left: auto; margin-top: 30px;"><i class="fas fa-check"></i> Lorem ipsum dolor sit amet.</p>
+      <p style="margin-left: auto; margin-top: 30px;"><i class="fas fa-check"></i> Lorem ipsum dolor sit amet.</p>
+      <p style="margin-left: auto; margin-top: 30px;"><i class="fas fa-check"></i> Lorem ipsum dolor sit amet.</p>
+    </div>
+    <div class="show-on-scroll inline-photo" style="display: flex;">
+      <p style="margin-left: auto; margin-top: 30px;"><i class="fas fa-check"></i> Lorem ipsum dolor sit amet.</p>
+      <p style="margin-left: auto; margin-top: 30px;"><i class="fas fa-check"></i> Lorem ipsum dolor sit amet.</p>
+      <p style="margin-left: auto; margin-top: 30px;"><i class="fas fa-check"></i> Lorem ipsum dolor sit amet.</p>
+      <p style="margin-left: auto; margin-top: 30px;"><i class="fas fa-check"></i> Lorem ipsum dolor sit amet.</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="container" style="padding: 120px 60px;">
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="card show-on-scroll inline-photo">
+        <div class="card-body" style="height: 400px;">
+          <canvas id="doughnut-chart"></canvas>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <h1 class="show-on-scroll inline-photo">Prediction Analysis</h1>
+      <p class="show-on-scroll inline-photo">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, molestiae iure. Laudantium accusamus provident in distinctio. Aliquam consequatur similique reiciendis odit debitis, adipisci deleniti vel doloribus! Harum magnam quas veniam temporibus molestias corporis hic error quasi? Maiores alias accusantium corrupti, temporibus, in praesentium nostrum aperiam at sit voluptates laudantium quam?</p>
+      <p class="show-on-scroll inline-photo"><i class="fas fa-check"></i> Lorem ipsum dolor sit amet.</p>
+      <p class="show-on-scroll inline-photo"><i class="fas fa-check"></i> Lorem ipsum dolor sit amet.</p>
+      <p class="show-on-scroll inline-photo"><i class="fas fa-check"></i> Lorem ipsum dolor sit amet.</p>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="fluid-container newsletter" style="background-color: #62afb9; padding: 60px; text-align: left;">
+  <div class="row">
+      <div class="col-lg-3">
+          <img src="../static/img/letter1.png" alt="">
+      </div>
+      <div class="col-lg-9" style="padding: 50px 0 0 50px;">
+          <div>
+              <h3 style="font-weight: 500; color: white;">Subscribe to our newsletter and never miss an update!</h3>
+              <p style="color: white;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae nostrum rerum saepe ratione temporibus enim?</p>
+              <input type="text" placeholder="Enter your email address">
+              <button class="btn" style="padding: 10px; background-color: #ff4449; color: white;">Let's get started!</button>
+          </div>
+      </div>
+  </div>
+</div> -->
+
+<div class="bottom-container" style="background-color: #2a333b; padding: 80px 40px 40px 40px;text-align: center;">
+  <h1 class="underline show-on-scroll inline-photo" style="color: #62afb9; margin-bottom: 40px;">CONTACT US</h1>
+  <h3 class="show-on-scroll inline-photo" style="color: white;">Let's us know what is on your mind!</h3>
+  <div class="row" style="padding: 80px 0;text-align: left;">
+      <div class="col-lg-6">
+          <div>
+              <ul class="info">
+                  <li class="show-on-scroll inline-photo">
+                      <span class="contact-icon"><i class="fas fa-map-marker-alt"></i></span>
+                      <span class="contact-desc ">XYZ, main road Kashmere gate, Delhi 110012</span>
+                  </li>
+                  <li class="show-on-scroll inline-photo">
+                      <span class="contact-icon"><i class="fas fa-at"></i></span>
+                      <a style="color: white;" class="contact-desc " href="mailto:punerva21@gmail.com">lorem@gmail.com</a>
+                  </li>
+                  <li class="show-on-scroll inline-photo">
+                      <span class="contact-icon"><i class="fas fa-phone-volume"></i></span>
+                      <span class="contact-desc ">947-986-6XXX</span>
+                  </li>
+              </ul>
+          </div>
+          <ul class="sci" style="display: flex;">
+              <li class="horizon-photo show-on-scroll"><a href="https://facebook.com"><i style="font-size: 25px;" class="fab fa-facebook-f"></i></a></li>
+              <li class="horizon-photo show-on-scroll"><a href="https://twitter.com"><i style="font-size: 25px;" class="fab fa-twitter"></i></a></li>
+              <li class="horizon-photo show-on-scroll"><a href="https://instagram.com"><i style="font-size: 25px;" class="fab fa-instagram"></i></a></li>
+              <li class="horizon-photo show-on-scroll"><a href="https://pinterest.com"><i style="font-size: 25px;" class="fab fa-pinterest-p"></i></a></li>
+              <li class="horizon-photo show-on-scroll"><a href="https://linkedin.com"><i style="font-size: 25px;" class="fab fa-linkedin-in"></i></a></li>
+          </ul>
+      </div>
+      <div class="col-lg-6">
+          <form action="">
+              <input class="contact-input show-on-scroll inline-photo" type="text" placeholder="Name">
+              <br>
+              <input class="contact-input show-on-scroll inline-photo" type="text" placeholder="Email">
+              <br>
+              <textarea class="contact-input show-on-scroll inline-photo" id="" name="" rows="5" cols="50" placeholder="Message"></textarea>            
+              <br>
+              <button style="width: 80%; background-color: #28818d; color: white;" class="btn contact-button show-on-scroll inline-photo" href="#">Send Message Now!</button>
+          </form> 
+      </div>
+  </div>
+</div>
+
+<div class="bottom-container" style="background-color: #38424b; padding: 40px;text-align: center;">
+        <a class="footer-link" href="https://www.linkedin.com">LinkedIn</a>
+        <a class="footer-link" rel="nofollow noreferrer" href="mailto:punerva21@gmail.com"> Email us </a>
+        <a class="footer-link" href="https://github.com/samya02/WE-Project-Disease-Predictor"> Github Repository </a>
+        <a class="footer-link" rel="nofollow noreferrer" href="{{url_for('guideline')}}"> Guide </a> 
+        <a class="footer-link" href="{{url_for('terms')}}"> Terms of Service </a>
+        <a class="footer-link" href="{{url_for('faq')}}"> FAQ's </a>
+        <p style="color:white;margin-top: 30px; color: rgb(95, 91, 91);" class="copyright">© 2021 predictium @ Talentsprint Project.</p>
+    </div>
+<!-- <footer class="site-footer container-fluid"> 
   <div class="wrap-size-lg container-fluid"> 
       <div class="row grid-spacing-sm"> 
-          <div class="footer-div col-lg-4 col-md-2 col-sm-6"> 
+          <div class="footer-div col-lg-6 col-md-2 col-sm-6"> 
             <h2 class="footer-heading">praedictionem</h2> 
               <ul class="footer-nav"> 
                   <li> 
@@ -60,7 +216,7 @@
                     </li> 
               </ul> 
           </div> 
-          <div class="footer-div col-lg-2 col-md-2 col-sm-6"> 
+          <div class="footer-div col-lg-3 col-md-2 col-sm-6"> 
               <h5 class="footer-subheading">GET IN TOUCH</h5>
               <ul class="footer-nav"> 
                   <li> 
@@ -70,23 +226,8 @@
                   <a rel="nofollow noreferrer" href="#"> Email us </a> 
               </li> 
               </ul> 
-          </div> 
-          <div class="footer-div col-lg-4 col-md-2 col-sm-6"> 
-            <h5 class="footer-subheading">JOIN OUR MAILING LIST</h5>
-            <p class="white-header">Get knowledge of latest medical advancement</p>
-              <form action="">
-                <label class="white-header" for="">Name</label>
-                <br>
-                <input class="footer-form-input" type="text">
-                <br>
-                <label class="white-header" for="">Email</label>
-                <br>
-                <input class="footer-form-input" type="text">
-                <br>
-                <button class="footer-form-button" href="#">Subscribe</button>
-              </form> 
-          </div> 
-          <div class="footer-div col-lg-2 col-md-2 col-sm-6"> 
+          </div>
+          <div class="footer-div col-lg-3 col-md-2 col-sm-6"> 
             <h5 class="footer-subheading">EXPLORE</h5>
             <ul class="footer-nav"> 
                 <li> 
@@ -103,23 +244,35 @@
                 </li>
             </ul> 
         </div> 
-      </div> 
-      <div class="footer-div col-lg-2 col-md-2 col-sm-6"> 
-        <ul class="footer-nav" style="display: flex;"> 
-            <li> 
-                <a href="#"><i class="fab fa-facebook-square"></i></a> 
-            </li> 
-            <li> 
-                <a href="#"><i class="fab fa-instagram"></i></a> 
-            </li> 
-            <li> 
-                <a href="#"><i class="fab fa-twitter-square"></i> </a> 
-            </li> 
-            <li> 
-                <a href="#"><i class="fab fa-linkedin"></i></a> 
-            </li> 
-        </ul> 
-    </div> 
+      </div>
   </div> 
-</footer>
+</footer> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.4.0/dist/chartjs-plugin-datalabels.min.js"></script>
+<script>
+  new Chart(document.getElementById("doughnut-chart"), {
+     type: 'doughnut',
+     data: {
+     labels: ['Accuracy', 'Close to accurate', 'not accurate'],
+     datasets: [
+         {
+         backgroundColor: ["rgb(204, 102, 102)", "rgb(230, 0, 230)","rgb(102, 102, 255)","rgb(0, 153, 51)","rgb(179, 179, 0)","rgb(255, 77, 148)", "rgb(77, 0, 153)", "rgb(51, 204, 204)", "rgb(51, 255, 119)", "rgb(204, 102, 255)","rgb(128, 128, 0)","rgb(102, 102, 153)","rgb(255, 153, 0)","rgb(0, 102, 204)","rgb(153, 153, 102)","rgb(102, 153, 153)","rgb(252, 174, 174)","rgb(0, 255, 153)","rgb(230, 230, 0)"],
+         
+         
+         data: [90,10, 40],
+         datalabels:{
+         display:false,
+         color:"black",
+             },
+         },
+     ],
+     },
+     options: {
+         responsive: true, 
+         maintainAspectRatio: false
+     }
+     })
+</script>
+<script src="{{url_for('static', filename='js/guide.js')}}"></script>
 {% endblock %}

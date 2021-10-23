@@ -9,15 +9,28 @@
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo:wght@200;300;400;500;600;700;800;900&family=Poppins:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Exo:wght@200&family=Poppins:wght@300&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/main.css')}}">
     {% block head %}
     {% block title %}{% endblock %}
     {% endblock %}
+    <style>
+        h1, h2, h3, h4, h5, h6{
+            font-family: 'Exo', sans-serif;
+            font-family: 'Poppins', sans-serif;
+        }
+        body{
+            font-family: 'Exo', sans-serif;
+        }
+    </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md fixed-top navbar-light bg-white">
+    <nav class="navbar navbar-expand-md fixed-top navbar-light bg-white" style="padding: 0;">
         <a class="navbar-brand" href="/home">Disease Prediction</a>
         <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
             <span class="navbar-toggler-icon"></span>
@@ -30,9 +43,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{url_for('about')}}">About</a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link" href="{{url_for('contact')}}">Contact Us</a>
-                </li>
+                </li> -->
                 {% if current_user.is_authenticated %}
                 <li class="nav-item">
                     <a class="nav-link" href="{{url_for('checkup')}}">Checkup</a>

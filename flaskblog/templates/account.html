@@ -10,41 +10,41 @@
         <div class="col-lg-3 col-sm-4 col-md-2 sidebar">
           <div class="sidebar-item">
             <div class="make-me-sticky" >
-              <ul class="nav_list" style="padding-left: 0;">
-                <h2 class="sidebar-heading">praedictionem</h2> 
+              <ul class="nav_list" style="padding-left: 0px;">
+                <h2 class="sidebar-heading">Quick Links</h2> 
                 <li class="list-item"> 
-                  <a class="sidebar-element" rel="nofollow noreferrer" target="_blank" href="#"> About us </a> 
+                  <a class="sidebar-element" rel="nofollow noreferrer" href="{{url_for('about')}}"> About us </a> 
                 </li>
                 <li class="list-item"> 
-                  <a class="sidebar-element" rel="nofollow noreferrer" href="#"> Email us </a> 
+                  <a class="sidebar-element" rel="nofollow noreferrer" href="mailto:punerva21@gmail.com"> Email us </a> 
                 </li> 
                 <li class="list-item"> 
-                  <a class="sidebar-element" href="#"> Github Repository </a> 
+                  <a class="sidebar-element" href="https://github.com/samya02/WE-Project-Disease-Predictor"> Github Repository </a> 
                 </li> 
                 <li class="list-item"> 
-                  <a class="sidebar-element" rel="nofollow noreferrer" target="_blank" href="#"> Guide </a> 
+                  <a class="sidebar-element" rel="nofollow noreferrer" href="{{url_for('guideline')}}"> Guide </a> 
                 </li>
                 <li class="list-item"> 
-                  <a class="sidebar-element" href="#"> Terms of Service </a> 
+                  <a class="sidebar-element" href="{{url_for('terms')}}"> Terms of Service </a> 
                 </li>  
                 <li class="list-item"> 
-                  <a class="sidebar-element" href="#"> FAQ's </a> 
+                  <a class="sidebar-element" href="{{url_for('faq')}}"> FAQ's </a> 
                 </li>
               </ul>
               <ul class="nav nav-sidebar">
                 <h2 class="sidebar-heading">Follow us: </h2> 
                 <ul class="footer-nav"> 
                   <li> 
-                      <a href="#"><i class="fab fa-facebook-square"></i></a> 
+                      <a href="https://facebook.com"><i class="fab fa-facebook-square"></i></a> 
                   </li> 
                   <li> 
-                      <a href="#"><i class="fab fa-instagram"></i></a> 
+                      <a href="https://instagram.com"><i class="fab fa-instagram"></i></a> 
                   </li> 
                   <li> 
-                      <a href="#"><i class="fab fa-twitter-square"></i> </a> 
+                      <a href="https://twitter.com"><i class="fab fa-twitter-square"></i> </a> 
                   </li> 
                   <li> 
-                      <a href="#"><i class="fab fa-linkedin"></i></a> 
+                      <a href="https://linkedin.com"><i class="fab fa-linkedin"></i></a> 
                   </li> 
                 </ul> 
               </ul>
@@ -54,7 +54,13 @@
         <div class="col-lg-9 col-sm-8 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <div class="row placeholders profile-container">
             <div class="col-xs-6 col-sm-3 placeholder">
-              <img class="profile-pic" src="../static/img/homebg.jpeg" class="img-responsive" alt="Generic placeholder thumbnail">
+              <img class="profile-pic" src="../static/img/default.jpeg" alt="">
+              <!-- {% if current_user.image_file == None %}
+                <img class="img-rounded" src="{{ url_for('static',filename='img/default.jpeg') }}">
+              {% else %}
+                <img class="img-rounded" src="{{ url_for('static',filename=current_user.image_file)}}">
+              {% endif %} -->
+              <!-- <img class="profile-pic" src="{{ url_for('static',filename=current_user.image_file)}}" align="left"> -->
             </div>
             <div class="info">
                 <h1 class="page-header">Welcome, {{ current_user.username }}</h1>
