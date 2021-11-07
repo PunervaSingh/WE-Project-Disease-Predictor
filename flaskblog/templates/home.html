@@ -2,7 +2,7 @@
 
 {% block head %}
 <!-- Page title -->
-<title>Disease Prediction</title>
+<title>MediSphere</title>
 <!-- Link to respective CSS stylesheet -->
 <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
 <style>
@@ -22,6 +22,7 @@
 .bottom-container li{
   margin: 20px 0;
 }
+
 </style>
 {% endblock %}
 
@@ -30,58 +31,45 @@
 <div class="container-fluid grey-container">
   <div class="row">
     <div class="col-lg-6" style="padding: 0; ">
-      <img style="height: 100vh; width: 100vw; object-fit: cover;" src="../static/img/background.jpeg" alt="">
+      <img style="height: 100vh; width: 100vw; object-fit: cover;" src="../static/img/background.jpg" alt="">
     </div>
-    <div class="col-lg-5" style="padding-top: 18vh; position: absolute; left: 50px;">
-      <h1 class="home-heading inner-div" style="color: white;">Disease Prediction</h1>
-      <p class="home-desc inner-div2">Disease Prediction using Machine Learning predicts disease based on the symptoms that the user enters. We predict the disease if the patient is not in danger and the user simply wants to know what disease he or she might have. The dataset consisting of at least 100 symptoms, is used to train the model to predict various diseases. The web application suggests treatments through a chat-bot(Medibot) that is meant to deal with the prognosis and some relevant information about the same.</p>
-      {% if current_user.is_authenticated %}
-      <a class="change-btn inner-div3" href="{{url_for('checkup')}}">Checkup Now!</a>
+    <div class="col-lg-5" style="padding-top: 25vh; position: absolute; left: 50px;">
+      <h1 class="home-heading inner-div" style="color: white;">MediSphere</h1>
+      <p class="home-desc inner-div2">Disease Diagnosis using Machine Learning diagnoses disease based on the symptoms that the user enters. We diagnose the disease if the patient is not in danger and the user simply wants to know what disease he or she might have. The dataset consisting of at least 100 symptoms, is used to train the model to diagnose various diseases. The web application provide preventive information about common diseases. Get latest health related news and have conversation with out medibot - Zen.</p>
+      <!-- {% if current_user.is_authenticated %}
       {% else %}
       <a class="change-btn inner-div3" href="{{url_for('login')}}">Get Started</a>
-      {% endif %}
+      {% endif %} -->
+      <a class="change-btn inner-div3" href="{{url_for('checkup')}}">Checkup Now!</a>
       <a class="change-btn inner-div3" href="{{url_for('guideline')}}">Help-Guide</a>   
     </div>
   </div>
 </div>
-
-
-<script type="text/javascript">
-  (function(d, m){
-      var kommunicateSettings = 
-          {"appId":"2a55b713e6315501c716ee288f7006b24","popupWidget":true,"automaticChatOpenOnNavigation":true};
-      var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
-      s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
-      var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
-      window.kommunicate = m; m._globals = kommunicateSettings;
-  })(document, window.kommunicate || {});
-/* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
-</script>
 
 <div class="container-fluid site-char">
   <div class="row" style="text-align: center;">
       <div class="col-lg-4 col-md-4 col-sm-12 show-on-scroll inline-photo">
         <div class="container" >
           <img class="char-img" src="../static/img/home3.png" alt="">
-          <h3>Predict Disease</h3>
-          <p>The disease is predicted using the algorithm(Decision Tree Classifier) and the user has to enter the symptoms from the given drop-down menu. </p>
-          <a class="btn" href="{{url_for('guideline')}}" style="background-color: #ff4449; color: white;">Know more <i class="fas fa-arrow-right"></i></a>
+          <h3>Diagnose Disease</h3>
+          <p>The disease is diagnosed using the algorithm(Decision Tree Classifier) and the user has to enter the symptoms from the given drop-down menu. </p>
+          <a class="btn" href="{{url_for('checkup')}}" style="background-color: #ff4449; color: white;">Know more <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
       <div class="col-lg-4 col-md-4 col-sm-12 show-on-scroll inline-photo">
         <div class="container">
           <img class="char-img" src="../static/img/home3.png" alt="">
-          <h3>Treatement Suggestion</h3>
-          <p>User is also provided the option of treatment based on the predicted disease. Follow the steps given in helpguide to get the information related to treatement.</p>
-          <a class="btn" href="{{url_for('guideline')}}" style="background-color: #ff4449; color: white;">Know more <i class="fas fa-arrow-right"></i></a>
+          <h3>Health Manoeuvre</h3>
+          <p>User is provided with resources for preventing common diseases. Insighful information related to yoga asanas are given for preventing diseases.</p>
+          <a class="btn" href="{{url_for('prevention')}}" style="background-color: #ff4449; color: white;">Know more <i class="fas fa-arrow-right"></i></a>
         </div>      
       </div>
       <div class="col-lg-4 col-md-4 col-sm-12 show-on-scroll inline-photo">
         <div class="container">
           <img class="char-img" src="../static/img/home3.png" alt="">
-          <h3>MediBot</h3>
-          <p>The web application suggests treatments through a chat-bot(Medibot) that is meant to deal with the prognosis and some relevant information about the same. </p>
-          <a class="btn" href="{{url_for('guideline')}}" style="background-color: #ff4449; color: white;">Know more <i class="fas fa-arrow-right"></i></a>
+          <h3>Bulletin & MediBot</h3>
+          <p>The web application provides latest health related news from all over the world and provide location of nearby health centers. Have conversation with our medibot.</p>
+          <a class="btn" href="{{url_for('healthcenter')}}" style="background-color: #ff4449; color: white;">Know more <i class="fas fa-arrow-right"></i></a>
         </div>      
       </div>
   </div>
@@ -89,7 +77,7 @@
 
 
 <div class="container-fluid" style="background-color: #f7f7f7; padding: 60px;">
-  <h1 class="show-on-scroll inline-photo" style="text-align: center;">Some of the Diseases predicted by us!</h1>
+  <h1 class="show-on-scroll inline-photo" style="text-align: center;">Some of the Diseases diagnosed by us!</h1>
   <div class="container">
     <div class="row">
       <div class="col-lg-3">
@@ -143,8 +131,8 @@
       </div>
     </div>
     <div class="col-lg-6">
-      <h1 class="show-on-scroll inline-photo">Prediction Analysis</h1>
-      <p class="show-on-scroll inline-photo">The application of classification algorithms on disease datasets yields promising results by developing adaptive, automated and intelligent diagnostic systems for diseases. Classification systems can be used to expedite the process and to enhance the computational efficiency of results. We have analyze accuracy of decision tree classification systems used in our system for disease prediction.</p>
+      <h1 class="show-on-scroll inline-photo">Diagnose Analysis</h1>
+      <p class="show-on-scroll inline-photo">The application of classification algorithms on disease datasets yields promising results by developing adaptive, automated and intelligent diagnostic systems for diseases. Classification systems can be used to expedite the process and to enhance the computational efficiency of results. We have analyze accuracy of decision tree classification systems used in our system for disease diagnose.</p>
       <p class="show-on-scroll inline-photo"><i class="fas fa-check"></i> Decision tree classification model</p>
       <p class="show-on-scroll inline-photo"><i class="fas fa-check"></i> 90% accuracy rate of ml model</p>
       <p class="show-on-scroll inline-photo"><i class="fas fa-check"></i> Link to disease dataset - <a href="https://impact.dbmi.columbia.edu/~friedma/Projects/DiseaseSymptomKB/index.html">Dataset</a></p>
@@ -210,17 +198,6 @@
       </div>
   </div>
 </div>
-
-
-<div class="bottom-container" style="background-color: #38424b; padding: 40px;text-align: center;">
-        <a class="footer-link" href="https://www.linkedin.com">LinkedIn</a>
-        <a class="footer-link" rel="nofollow noreferrer" href="mailto:punerva21@gmail.com"> Email us </a>
-        <a class="footer-link" href="https://github.com/samya02/WE-Project-Disease-Predictor"> Github Repository </a>
-        <a class="footer-link" rel="nofollow noreferrer" href="{{url_for('guideline')}}"> Guide </a> 
-        <a class="footer-link" href="{{url_for('terms')}}"> Terms of Service </a>
-        <a class="footer-link" href="{{url_for('faq')}}"> FAQ's </a>
-        <p style="color:white;margin-top: 30px; color: rgb(95, 91, 91);" class="copyright">© 2021 predictium @ Talentsprint Project.</p>
-    </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>

@@ -4,6 +4,7 @@ from flaskblog.forms import RegistrationForm, LoginForm
 from flaskblog.models import User
 from flask_login import login_user, current_user, logout_user, login_required
 import csv
+from newsapi import NewsApiClient
 from flaskblog.diseaseprediction import dosomething
 
 @app.route('/')
@@ -121,3 +122,49 @@ def terms():
 @app.route('/faq')
 def faq():
     return render_template('faq.html')
+
+@app.route('/prevention')
+def prevention():
+    return render_template('prevention.html')
+
+@app.route('/healthcenter')
+def healthcenter():
+    newsapi = NewsApiClient(api_key='e199baf26faf43349465edc421e099c4')
+    top_headlines = newsapi.get_top_headlines(category='health')
+
+    articles = top_headlines['articles']
+    desc = []
+    news = []
+    img = []
+    url = []
+    for i in range(len(articles)):
+        myarticles = articles[i]
+
+        news.append(myarticles['title'])
+        desc.append(myarticles['description'])
+        img.append(myarticles['urlToImage'])
+        url.append(myarticles['url'])
+    
+    mylist = zip(news, desc, img, url)
+
+    return render_template('healthcenter.html', context = mylist)
+
+@app.route('/obesity')
+def obesity():
+    return render_template('obesity.html')
+
+@app.route('/diabetes')
+def diabetes():
+    return render_template('diabetes.html')
+
+@app.route('/asthma')
+def asthma():
+    return render_template('asthma.html')
+
+@app.route('/hypertension')
+def hypertension():
+    return render_template('hypertension.html')
+
+@app.route('/backpain')
+def backpain():
+    return render_template('backpain.html')

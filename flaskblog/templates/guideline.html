@@ -46,7 +46,7 @@
                                 </a>
                             </li>
                             
-                            <li class="list-item" data-tooltip="CSS3">
+                            <!-- <li class="list-item" data-tooltip="CSS3">
                                 <a href="#register" class="genre-element">
                                     <span class="sidebar-element text">Register Page</span>
                                 </a>
@@ -56,7 +56,7 @@
                                 <a href="#login" class="genre-element">
                                     <span class="sidebar-element text">Login Page</span>
                                 </a>
-                            </li>
+                            </li> -->
 
                             
                             <li class="list-item" data-tooltip="Firefox">
@@ -66,16 +66,27 @@
                             </li>
 
                             <li class="list-item" data-tooltip="Facebook">
+                                <a href="#prevention" class="genre-element">
+                                    <span class="sidebar-element text">Manoeuvre Page</span>
+                                </a>
+                            </li>
+
+                            <li class="list-item" data-tooltip="CSS3">
+                                <a href="#news" class="genre-element">
+                                    <span class="sidebar-element text">Bulletin Page</span>
+                                </a>
+                            </li>
+                            <li class="list-item" data-tooltip="Facebook">
                                 <a href="#medibot" class="genre-element">
                                     <span class="sidebar-element text">Intro to Medibot</span>
                                 </a>
                             </li>
 
-                            <li class="list-item" data-tooltip="CSS3">
+                            <!-- <li class="list-item" data-tooltip="CSS3">
                                 <a href="#account" class="genre-element">
                                     <span class="sidebar-element text">Account Page</span>
                                 </a>
-                            </li>
+                            </li> -->
 
                             <li class="list-item" data-tooltip="Python">
                                 <a href="#faq" class="genre-element">
@@ -88,6 +99,11 @@
                                     <span class="sidebar-element text">Terms & Condition Page</span>
                                 </a>
                             </li>
+                            <li class="list-item" data-tooltip="Settings">
+                                <a href="#number" class="genre-element">
+                                    <span class="sidebar-element text">Emergency Number</span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
               </div>
@@ -95,7 +111,7 @@
         </div>
         <div class="col-lg-9" style="margin-top: 150px;padding: 0 50px 10%;">
             <h1 class="heading1">Step by Step</h1>
-            <h1 class="heading2">Guide To Disease Prediction</h1>
+            <h1 class="heading2">Guide To MediSphere</h1>
             <div>
                 <h2 id="home">Home Page</h2>
                 <img src="{{url_for('static', filename='img/main.png')}}" class="guide-image inline-photo show-on-scroll" alt="">
@@ -120,7 +136,7 @@
                 <p>On the about page, you will be able to get a clear idea about the site. Information on the features and statistics are given on this page. You can also discover the developer of this application along with their social media handles. You have the newsletter subscription form on this page as well. Make sure to fill in your email address in it to get latest updates in health related technologies and treatements.</p>
             </div>
 
-            <div>
+            <!-- <div>
                 <h2 id="register">Register Page</h2>
                 <img src="{{url_for('static', filename='img/register.png')}}" class="guide-image inline-photo show-on-scroll" alt="">
                 <p>On the register page, fill your information and click on register. You will be directed to the home page where message will appear confirming that you have registered successfully. </p>            
@@ -129,16 +145,17 @@
                 <h2 id="login">Login Page</h2>
                 <img src="{{url_for('static', filename='img/login.png')}}" class="guide-image inline-photo show-on-scroll" alt="">
                 <p>On the login page, enter your email and password to enter into your account. If you are a new user, then you will have to register first. To register click on 'Click here to register' link, after which you will be taken to register page as shown below.</p>            
-            </div>
+            </div> -->
+
             <div>
                 <h2 id="checkup">Checkup Page</h2>
                 <img src="{{url_for('static', filename='img/checkup.png')}}" class="guide-image inline-photo show-on-scroll" alt="">
-                <p>Checkup page is the main focus of this web application. It is the destination which is most used by the users. Here you can predict the disease using the given symptoms.</p>
+                <p>Checkup page is the main focus of this web application. It is the destination which is most used by the users. Here you can diagnose the disease using the given symptoms.</p>
             </div>
             
             <div>
                 <h2 id="how_checkup">How to do checkup?</h2>
-                <p>Follow the folllowing steps to predict diseases:- </p>
+                <p>Follow the folllowing steps to diagnose diseases:- </p>
                 <ol>
                     <li>Fill Symptom 1 from the given list of symptoms</li>
                     <li>Fill Symptom 2 from the given list of symptoms</li>
@@ -146,23 +163,35 @@
                     <li>Fill Symptom 4 from the given list of symptoms</li>
                     <li>Fill Symptom 5 from the given list of symptoms</li>
                     <li>After filling all the symptoms, click on check now.</li>
-                    <li>You will be directed to page which will predict disease on the basis of symptoms.</li>
+                    <li>You will be directed to page which will diagnose disease on the basis of symptoms.</li>
                     <li>You can go and get checkup done one more time or you can checkout other page on our site.</li>
                 </ol>
             </div>
 
             <div>
                 <h2 id="medibot">Intro to Medibot</h2>
-                <img src="{{url_for('static', filename='img/predict.png')}}" class="guide-image inline-photo show-on-scroll" alt="">
+                <img src="{{url_for('static', filename='img/bot.png')}}" class="guide-image inline-photo show-on-scroll" alt="">
                 <p>We have provided medibot for better experience of user. We will be improving it more in the coming time.</p>
             </div>
             
-            <div>
+            <!-- <div>
                 <h2 id="account">Account Page</h2>
                 <img src="{{url_for('static', filename='img/account.png')}}" class="guide-image inline-photo show-on-scroll" alt="">
-                <p>On Account pageuser will be able to get his/her account details and update them. He/she will also be able to see all the prediction that has been done by his/her account.</p>
-            </div>
+                <p>On Account pageuser will be able to get his/her account details and update them.</p>
+            </div> -->
             
+            <div>
+                <h2 id="prevention">Manoeuvre Page</h2>
+                <img src="{{url_for('static', filename='img/prevention.png')}}" class="guide-image inline-photo show-on-scroll" alt="">
+                <p>On Manoeuvre page, you will be able to see prevention of some common diseases. Trending diseases and how to prevent them are also provided on the page. Some diseases which can be prevented by practicing yoga are also mentioned. Atlast a setion for inculcating healthy habits is given.</p>
+            </div>
+
+            <div>
+                <h2 id="news">Bulletin Page</h2>
+                <img src="{{url_for('static', filename='img/news.png')}}" class="guide-image inline-photo show-on-scroll" alt="">
+                <p>On Bulletin page, you will be able to see latest health related news from all over the world. A feature of finding health center nearby is also provided.</p>
+            </div>
+
             <div>
                 <h2 id="faq">FAQ Page</h2>
                 <img src="{{url_for('static', filename='img/faq.png')}}" class="guide-image inline-photo show-on-scroll" alt="">
@@ -174,18 +203,14 @@
                 <img src="{{url_for('static', filename='img/terms.png')}}" class="guide-image inline-photo show-on-scroll" alt="">
                 <p>On Terms & conditions page, you will be able to see all terms and contions that have to be followed by the user while using our application.</p>
             </div>
+
+            <div>
+                <h2 id="number">Emergency Number</h2>
+                <img src="{{url_for('static', filename='img/number.png')}}" class="guide-image inline-photo show-on-scroll" alt="">
+                <p>Emergency number for health related emergency are provided in the footer both common and statewise.</p>
+            </div>
         </div>
     </div>
-</div>
-<script src="{{url_for('static', filename='js/guide.js')}}"></script>
-<div class="bottom-container" style="background-color: #38424b; padding: 40px;text-align: center;">
-    <a class="footer-link" href="https://www.linkedin.com">LinkedIn</a>
-    <a class="footer-link" rel="nofollow noreferrer" href="mailto:punerva21@gmail.com"> Email us </a>
-    <a class="footer-link" href="https://github.com/samya02/WE-Project-Disease-Predictor"> Github Repository </a>
-    <a class="footer-link" rel="nofollow noreferrer" href="{{url_for('guideline')}}"> Guide </a> 
-    <a class="footer-link" href="{{url_for('terms')}}"> Terms of Service </a>
-    <a class="footer-link" href="{{url_for('faq')}}"> FAQ's </a>
-    <p style="color:white;margin-top: 30px; color: rgb(95, 91, 91);" class="copyright">© 2021 predictium @ Talentsprint Project.</p>
 </div>
 <script src="{{url_for('static', filename='js/guide.js')}}"></script>
 {% endblock %}

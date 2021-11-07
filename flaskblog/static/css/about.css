@@ -86,7 +86,7 @@ hr{
 }
 
 input, textarea{
-    width: 80%;
+    width: 80%; 
     padding: 10px;
     border: none;
     outline: none;
@@ -147,4 +147,11 @@ input, textarea{
 @keyframes mymove {
     from {transform: translateY(-60px); opacity: -1}
     to {transform: translateX(0); opacity: 1}
+}
+
+.c1{
+    left: 10%;
+}
+.c2{
+    left: 60%;
 }
