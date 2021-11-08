@@ -153,3 +153,11 @@ h2{
     opacity: 1;
     transform: rotateY(0);
 }
+
+.heading1, .heading2{
+    font-weight: 600;
+    font-size: 40px;
+    color: rgb(2, 61, 61);
+    font-family: 'Exo';
+    text-align: center;
+}

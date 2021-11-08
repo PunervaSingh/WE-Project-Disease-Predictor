@@ -1,33 +1,5 @@
-// var factPlaceholder = document.getElementById("cat-fact");
-// var showFact = document.getElementById("show-fact");
-
-// /* Facts from this API: https://fact.birb.pw/api/v1/cat */
-
-// var CatFacts = ["There are more bacteria in your mouth than there are people in the world.",
-//                "Cats share 95.6% of their DNA with tigers.",
-//                "Cats are asleep for 70% of their lives.",
-//                "Cat kidneys are super efficient, they can rehydrate by drinking seawater.",
-//                "Kittens who are taken along on short, trouble-free car trips to town tend to make good passengers when they get older. They get used to the sounds and motions of traveling and make less connection between the car and the visits to the vet."]
-
-// var factNumber;
-
-// function randomFact(){
-//   return CatFacts[factNumber];
-// }
-
-// showFact.addEventListener('click', function(){
-//   factNumber = Math.floor(Math.random()*5);
-//   factPlaceholder.textContent = randomFact();
-// });
-
-
-    
-    
-
-    
-
 (function newFact() {
-    var facts = ["There are more bacteria in your mouth than there are people in the world.",
+  var facts = ["There are more bacteria in your mouth than there are people in the world.",
     "Laughing is good for the heart and can increase blood flow by 20 percent.",
     "Your skin works hard. Not only is it the largest organ in the body, but it regulates your temperature and defends against disease and infection.",
     "Always look on the bright side: being an optimist can help you live longer.",
@@ -37,8 +9,8 @@
     "39% of adults in the world are overweight.",
     "Between 2000 and 2015, the average global life expectancy increased by five years.",
     "Less than 1% of Americans ride their bike to work, while 50% of Copenhagen residents bike to work or school."
-    ];
-    var mentalfacts = ["Learning a new language or playing a musical instrument gives your brain a boost.",
+  ];
+  var mentalfacts = ["Learning a new language or playing a musical instrument gives your brain a boost.",
     "Feeling stressed? Read. Getting lost in a book can lower levels of cortisol, and other unhealthy stress hormones, by 68%.",
     "Maintaining good relationships with your friends and family, reduces harmful levels of stress and boosts your immune system.",
     "Drinking coffee can reduce the risk of depression, especially in women.",
@@ -48,8 +20,8 @@
     "Chewing gum makes you more alert, relieves stress and reduces anxiety levels.",
     "Yoga can boost your cognitive function and lower stress.",
     "Walking outside – or spending time in green space – can reduce negative thoughts and boost self-esteem."
-    ];
-    var foodfacts = ["Chocolate is good for your skin; its antioxidants improve blood flow and protect against UV damage.",
+  ];
+  var foodfacts = ["Chocolate is good for your skin; its antioxidants improve blood flow and protect against UV damage.",
     "Almonds, avocados and arugula (the three ‘A’s) can improve fertility.",
     "Tea can lower risks of heart attack, certain cancers, type 2 Diabetes and Parkinson’s disease. Just make sure your tea isn’t too sweet!",
     "Eating oatmeal provides a serotonin boost to calm the brain and improve your mood.",
@@ -59,8 +31,8 @@
     "The amino acid found in eggs can help improve your reflexes.",
     "Extra virgin olive oil is the healthiest fat on the planet.",
     "Vitamin D is as important as calcium in determining bone health, and most people don’t get enough of it."
-    ];
-    var fitnessfacts = ["There are five main components of fitness: the body’s ability to use oxygen, muscular strength, endurance, flexibility and body composition.",
+  ];
+  var fitnessfacts = ["There are five main components of fitness: the body’s ability to use oxygen, muscular strength, endurance, flexibility and body composition.",
     "The body has more than 650 muscles.",
     "Sleeping naked can help you burn more calories.",
     "Walking at a fast pace for three hours or more at least once a week, you can reduce your risk of heart disease by up to 65%.",
@@ -70,8 +42,8 @@
     "Exercising regularly can increase your lifespan by keeping your DNA healthy and young.",
     "The average moderately active person walks approximately 7,500 steps a day, which is the lifetime equivalent of walking around the Earth five times.",
     "Stretching increases the blood flow to your muscles and helps avoid injuries."
-    ];
-    var hydrationfacts = ["Drinking at least five glasses of water a day can reduce your chances of suffering from a heart attack by 40%.",
+  ];
+  var hydrationfacts = ["Drinking at least five glasses of water a day can reduce your chances of suffering from a heart attack by 40%.",
     "Dehydration can have a negative impact on your mood and energy levels. Drink enough water to ensure you’re always at your best.",
     "Consuming water helps the body maintain its natural pH balance.",
     "Repeatedly using plastic water bottles can release chemicals into your water. Why not try a reusable bottle instead? It’s good for you and the planet.",
@@ -81,8 +53,8 @@
     "A lack of water can cause a range of problems, such as constipation, asthma, allergy and migraines.",
     "Water can aid in weight loss because it helps to remove the by-products of fat and if consumed before a meal can make you more satisfied and eat less.",
     "Your muscles and joints require water in order to stay energized, lubricated and healthy."
-    ];
-    var practices = [    "Massage isn’t just for the muscles. It can help scars fade, and can be more beneficial than lotion or oil.",
+  ];
+  var practices = ["Massage isn’t just for the muscles. It can help scars fade, and can be more beneficial than lotion or oil.",
     "Brushing teeth too soon after eating or drinking can soften the tooth enamel, especially if you’ve just been eating or drinking acidic foods.",
     "Want to slow the aging process? Meditation is proven to help!",
     "Indoor air pollution can be even worse than outside.",
@@ -92,8 +64,8 @@
     "Cardio exercise before breakfast can burn more fat.",
     "Wild-caught fish, grass-fed meats and free-range eggs are simple ways to inject healthy changes to your diet without drastically altering what you eat.",
     "Breathing deeply in moments of stress, or anytime during the day, brings many benefits such as better circulation, decreased anxiety and reduced blood pressure."
-    ];
-    var random = ["‘Gymnasium’ comes from the Greek word ‘gymnazein’, meaning ‘to exercise naked’.",
+  ];
+  var random = ["‘Gymnasium’ comes from the Greek word ‘gymnazein’, meaning ‘to exercise naked’.",
     "On average, there are more bacteria per square inch in a kitchen sink than the bathroom.",
     "The nose knows: it can remember 50,000 different scents.",
     "Humans have 46 chromosomes, while peas have 14 and crayfish have 200.",
@@ -103,31 +75,15 @@
     "Humans can cough at 60 miles an hour and sneezes can be 100 miles an hour – which is faster than the average car!",
     "Although bodies stop growing, noses and ears will not.",
     "The soles of your feet contain more sweat glands and nerve endings per square inch than anywhere else on your body."
-    ];
-    var randomFact = Math.floor(Math.random() * facts.length);
-    document.getElementById('factDisplay').innerHTML = facts[randomFact];
-    document.getElementById('mentalfactDisplay').innerHTML = mentalfacts[randomFact];
-    document.getElementById('foodfactDisplay').innerHTML = foodfacts[randomFact];
-    document.getElementById('fitnessfactDisplay').innerHTML = fitnessfacts[randomFact];
-    document.getElementById('fitnessfactDisplay').innerHTML = fitnessfacts[randomFact];
-    document.getElementById('hydrationfactDisplay').innerHTML = hydrationfacts[randomFact];
-    document.getElementById('hydrationfactDisplay').innerHTML = hydrationfacts[randomFact];
-    document.getElementById('practicesfactDisplay').innerHTML = practices[randomFact];
-    document.getElementById('randomfactDisplay').innerHTML = random[randomFact];
-  })();
-
-  // (function mentalFact() {
-  //   var facts = ["Learning a new language or playing a musical instrument gives your brain a boost.",
-  //   "Feeling stressed? Read. Getting lost in a book can lower levels of cortisol, and other unhealthy stress hormones, by 68%.",
-  //   "Maintaining good relationships with your friends and family, reduces harmful levels of stress and boosts your immune system.",
-  //   "Drinking coffee can reduce the risk of depression, especially in women.",
-  //   "Smelling rosemary may increase alertness and improve memory so catch a whiff before a test or important meeting.",
-  //   "Swearing can make you feel better when you’re in pain.",
-  //   "Writing in a journal can make you a happier person!",
-  //   "Chewing gum makes you more alert, relieves stress and reduces anxiety levels.",
-  //   "Yoga can boost your cognitive function and lower stress.",
-  //   "Walking outside – or spending time in green space – can reduce negative thoughts and boost self-esteem."
-  //   ];
-  //   var randomFact = Math.floor(Math.random() * facts.length);
-  //   document.getElementById('mentalfactDisplay').innerHTML = facts[randomFact];
-  // })();
+  ];
+  var randomFact = Math.floor(Math.random() * facts.length);
+  document.getElementById('factDisplay').innerHTML = facts[randomFact];
+  document.getElementById('mentalfactDisplay').innerHTML = mentalfacts[randomFact];
+  document.getElementById('foodfactDisplay').innerHTML = foodfacts[randomFact];
+  document.getElementById('fitnessfactDisplay').innerHTML = fitnessfacts[randomFact];
+  document.getElementById('fitnessfactDisplay').innerHTML = fitnessfacts[randomFact];
+  document.getElementById('hydrationfactDisplay').innerHTML = hydrationfacts[randomFact];
+  document.getElementById('hydrationfactDisplay').innerHTML = hydrationfacts[randomFact];
+  document.getElementById('practicesfactDisplay').innerHTML = practices[randomFact];
+  document.getElementById('randomfactDisplay').innerHTML = random[randomFact];
+})();
