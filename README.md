@@ -1,7 +1,12 @@
-# WE-Project-Disease-Predictor
-### A web application to predicts the disease based on the symptoms given by the user and suggesting the treatments to deal with the predicted disease.
-* We predict the disease if the patient is not in danger and the user simply wants to know what disease he or she might have.
-* The dataset consisting of at least 100 symptoms, is used to train the model to predict various diseases.
+# MediSphere - Disease Diagnosis
+### MediSphere is a web application that diagnose disease using machine learning model based on the symptoms that the user enters.
+[Website Link](https://we-project-disease-predictor.herokuapp.com/)
+* We diagnose the disease if the patient is not in danger and the user simply wants to know what disease he or she might have.
+* The dataset consisting of at least 100 symptoms, is used to train the model to diagnose various diseases.
+* The web application provides latest health related news from all over the world.
+* It also provide information of nearby healthcare center to the user along with emergency helpline numbers.
+* The website provides information such as causes, symptoms and prevention related to common diseases. 
+* It includes yoga instruction for preventing some of the most common ailments.
 
 ### 📌 Table of Contents
 * [Toolchain](#toolchain)
@@ -28,16 +33,27 @@
 
 ***Dtabase*** : SQLite
 
-***Libraries*** : Pandas, Numpy, Scikit-learn
+***Libraries*** : Pandas, Numpy, Scikit-learn, GSAP
+
+***API*** : NewsApi, MapBox, Kommunicate
 
 ***Other*** : Dialogflow, Git - Version Control, Visual Studio Code
 
 
 <a id="features"></a>
 ## 🚀 Features
-- The user is required to register with the system, in order to access the features of the web application.
-- The disease is predicted using the algorithm(Decision Tree Classifier) and the user has to enter the symptoms from the given drop-down menu.
+<!-- - The user is required to register with the system, in order to access the features of the web application. -->
+<!-- - The disease is predicted using the algorithm(Decision Tree Classifier) and the user has to enter the symptoms from the given drop-down menu.
 - The web application suggests treatments through a chat-bot(Medibot) that is meant to deal with the prognosis and some relevant information about the same.
+- Provides the information about the nearby healthcare centers. -->
+- Disease Diagnosis
+- Up-to-date health-related news
+- Nearby medical facilities
+- Emergency helpline numbers
+- Information related to common diseases
+- Health Trivia
+- Yoga Guide
+- Chat-Bot
 - [Add more features](#feature-request)...
 
 <a id="overview"></a>
@@ -46,43 +62,56 @@
 ![Website Image](flaskblog/static/img/main.png?raw=true "Title")
 ### About Page 
 ![Website Image](flaskblog/static/img/about.png?raw=true "Title")
-### Register Page 
+### Manoeuvre Page 
+![Website Image](flaskblog/static/img/prevention.png?raw=true "Title")
+### Bulletin Page 
+![Website Image](flaskblog/static/img/news.png?raw=true "Title")
+<!-- ### Register Page 
 ![Website Image](flaskblog/static/img/register.png?raw=true "Title")
 ### Login Page
-![Website Image](flaskblog/static/img/login.png?raw=true "Title")
+![Website Image](flaskblog/static/img/login.png?raw=true "Title") -->
 ### Checkup Page 
 ![Website Image](flaskblog/static/img/checkup.png?raw=true "Title")
+### Diagnosed Disease 
+![Website Image](flaskblog/static/img/diagnosis.png?raw=true "Title")
 ### User Helpguide
 ![Website Image](flaskblog/static/img/guide.png?raw=true "Title")
-### Terms and condition Page 
-![Website Image](flaskblog/static/img/terms.png?raw=true "Title")
+<!-- ### Terms and condition Page 
+![Website Image](flaskblog/static/img/terms.png?raw=true "Title") -->
 ### FAQ Page 
 ![Website Image](flaskblog/static/img/faq.png?raw=true "Title")
+### Emergency Helpline Numbers
+![Website Image](flaskblog/static/img/number.png?raw=true "Title")
 
 <a id="learning"></a>
 ## 💡 Learnings
 - Enhancing designing and graphic skills by accomodating javascript bootstrap library.
 - Incorporating on scroll triggers for different elements using javascript and CSS.
 - Integrating machine learning model with the web application.
-- Creating and retrieving data of the user from the database.
+- To call an API and display data onto our website.
 - Implementing dialogflow bot into our web application with the help of kommunicate.
+- Successfully deploying a web application on Heroku platform.
 
 <a id="challenges"></a>
 ## 💡 Challenges faced
 - Had technical setup issue related to sklearn library while developing the project.
 - Gathering dataset for the diseases and their treatment.
 - Diﬀiculty with model building for disease prediction and integrating it with the web application.
-- Model is not able to suggest the treatment for the predicted disease.
 - Faced problem while gathering illsutrations and graphical representation for the related content of the website.
+- Finding free API that met all of our requirements.
+- Ran into multiple error while deploying the app.
 
 <a id="scope"></a>
 ## 🚧 Future Scope/ What's next?
 
 - [ ] Implementing disease prediction using symptoms through Whatsapp using API calls.
-- [ ] The model will not only predicts the disease but also suggests specialization that is meant to deal with the treatement.
-- [ ] To maintain the history of the predicted disease of the user.
-- [ ] Seeking online medical help via a calling feature and proving information of nearby healthcare center to the user.
 - [ ] Make website responsive for multiple devices and develop mobile application for the same.
+- [ ] Seeking online medical help via a calling feature.
+- [ ] Providing latest health-related news as html template on the email of subscribed users.
+<!-- - [ ] Seeking online medical help via a calling feature.
+- [ ] Providing information of nearby healthcare center to the user. -->
+<!-- - [ ] The model will not only predicts the disease but also suggests specialization that is meant to deal with the treatement.
+- [ ] To maintain the history of the predicted disease of the user. -->
 
 <a id="resources"></a>
 ## 📚 Resources
@@ -97,6 +126,9 @@
 - [Pandas Documentation](https://pandas.pydata.org/docs/)
 - [Numpy Documentation](https://numpy.org/doc/)
 - [Scikit-learn Documentation](https://scikit-learn.org/stable/)
+- [GSAP](https://greensock.com/docs/v3/GSAP)
+- [Map-Box](https://www.mapbox.com/)
+- [NewsApi](https://newsapi.org/)
 - [Disease Dataset](https://impact.dbmi.columbia.edu/~friedma/Projects/DiseaseSymptomKB/index.html)
 
 
