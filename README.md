@@ -31,7 +31,7 @@
 
 ***Backend*** : Flask, Jinja
 
-***Dtabase*** : SQLite
+***Database*** : SQLite
 
 ***Libraries*** : Pandas, Numpy, Scikit-learn, GSAP
 
